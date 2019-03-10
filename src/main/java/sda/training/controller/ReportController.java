@@ -14,4 +14,7 @@ public interface ReportController {
     List<CatOwnerWithCatsResponse> getAllCatOwnersWithCatsByOwnerPersonCode(
             GetAllEntitiesRequest getAllEntitiesRequest);
 
+    List<String> getMostPopularCatModel(
+            GetAllEntitiesRequest getAllEntitiesRequest);
+
 }

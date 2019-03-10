@@ -38,4 +38,12 @@ public class ReportControllerImpl implements ReportController {
             @RequestBody GetAllEntitiesRequest getAllEntitiesRequest) {
         return reportService.getAllCatOwnersWithCatsByOwnerPersonCode(getAllEntitiesRequest);
     }
+
+    @Override
+    @PutMapping(value = "/get_most_popular_cat_model",
+            headers = {"Accept=application/json"})
+    @ResponseBody
+    public List<String> getMostPopularCatModel(GetAllEntitiesRequest getAllEntitiesRequest) {
+        return null;
+    }
 }

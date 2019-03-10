@@ -1,0 +1,31 @@
+As explained in my book, High-Performance Java Persistence, Hibernate offers features that are not yet supported by JPA:
+
+extended identifier generators (hi/lo, pooled, pooled-lo)
+transparent prepared statement batching
+customizable CRUD (@SQLInsert, @SQLUpdate, @SQLDelete) statements
+static or dynamic collection filters (e.g. @FilterDef, @Filter, @Where) and entity filters (e.g. @Where)
+mapping properties to SQL fragments (e.g. @Formula)
+immutable entities (e.g. @Immutable)
+more flush modes (e.g. FlushMode.MANUAL, FlushMode.ALWAYS)
+querying the second-level cache by the natural key of a given entity
+entity-level cache concurrency strategies (e.g. Cache(usage = CacheConcurrencyStrategy.READ_WRITE))
+versioned bulk updates through HQL
+exclude fields from optimistic locking check (e.g. @OptimisticLock(excluded = true))
+versionless optimistic locking (e.g. OptimisticLockType.ALL, OptimisticLockType.DIRTY)
+support for skipping (without waiting) pessimistic lock requests
+support for Java 8 Date and Time
+support for multitenancy
+support for soft delete (e.g. @Where, @Filter)
+
+<dependency>
+        <groupId>org.hibernate</groupId>
+        <artifactId>hibernate-ehcache</artifactId>
+        <version>4.3.5.Final</version>
+</dependency>
+
+@Entity
+@Table(name = "")
+@Cache(usage=CacheConcurrencyStrategy.READ_ONLY, region="")
+public class Address {
+
+}

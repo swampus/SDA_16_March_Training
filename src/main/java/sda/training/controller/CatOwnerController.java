@@ -12,4 +12,6 @@ public interface CatOwnerController {
 
     CatOwnerDTO getCatOwnerByCatPassportCode(GetAllEntitiesByKeyRequest getAllEntitiesByKeyRequest);
 
+    List<CatOwnerDTO> getCatOwnerWithMaxCatCount(GetAllEntitiesRequest getAllEntitiesRequest);
+
 }

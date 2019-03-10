@@ -9,6 +9,9 @@ Plan:
 4. Explore sonarQube
 5. Start implement Services
 6. Make pull REQUEST to repository
+7. Cache ? We can access to it by key from HIBERNATE
+8. Optimistic fields locking check
+
 
 mvn clean install
 mvn spring-boot:run
@@ -20,6 +23,8 @@ public interface CatOwnerController {
     List<CatOwnerDTO> getAllCatOwners(GetAllEntitiesRequest getAllEntitiesRequest);
 
     CatOwnerDTO getCatOwnerByCatPassportCode(GetAllEntitiesByKeyRequest getAllEntitiesByKeyRequest);
+
+    List<CatOwnerDTO> getCatOwnerWithMaxCatCount(GetAllEntitiesRequest getAllEntitiesRequest);
 }
 
 public interface CatsController {

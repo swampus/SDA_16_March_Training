@@ -37,4 +37,12 @@ public class CatOwnerControllerImpl implements CatOwnerController {
             @RequestBody GetAllEntitiesByKeyRequest getAllEntitiesByKeyRequest) {
         return catOwnerService.getCatOwnerByCatPassportCode(getAllEntitiesByKeyRequest);
     }
+
+    @Override
+    @PutMapping(value = "/get_cat_owner_with_max_cat_count",
+            headers = {"Accept=application/json"})
+    @ResponseBody
+    public List<CatOwnerDTO> getCatOwnerWithMaxCatCount(GetAllEntitiesRequest getAllEntitiesRequest) {
+        return null;
+    }
 }
