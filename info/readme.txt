@@ -17,6 +17,13 @@ mvn clean install
 mvn spring-boot:run
 http://localhost:8080/swagger-ui.html
 
+mvn clean verify sonar:sonar
+
+# In some situation you may want to run sonar:sonar goal as a dedicated step. Be sure to use install as first step for multi-module projects
+mvn clean install
+mvn sonar:sonar
+
+http://localhost:9000
 
 TODO :
 public interface CatOwnerController {

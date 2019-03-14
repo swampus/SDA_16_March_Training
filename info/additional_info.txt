@@ -29,3 +29,31 @@ support for soft delete (e.g. @Where, @Filter)
 public class Address {
 
 }
+
+
+If you get an java.lang.OutOfMemoryError, you can set the MAVEN_OPTS environment variable, like this in *nix environments:
+
+export MAVEN_OPTS="-Xmx512m"
+On Windows environments, avoid the double-quotes, since they get misinterpreted.
+
+set MAVEN_OPTS=-Xmx512m
+
+<settings>
+    <pluginGroups>
+        <pluginGroup>org.sonarsource.scanner.maven</pluginGroup>
+    </pluginGroups>
+    <profiles>
+        <profile>
+            <id>sonar</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <!-- Optional URL to server. Default value is http://localhost:9000 -->
+                <sonar.host.url>
+                  http://myserver:9000
+                </sonar.host.url>
+            </properties>
+        </profile>
+     </profiles>
+</settings>
