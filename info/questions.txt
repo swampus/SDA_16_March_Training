@@ -1,7 +1,7 @@
-1. What is JDBC
-2. What is ORM / HIBERNATE / JPA what is main difference.
+1. What is JDBC Driver
+2. What is ORM / HIBERNATE / JPA / JSR-000338 what is main difference ?
 3. What is MongoDB ? What is difference for example, from REDIS
-4. Why it is bed to create a sql string and send it using JDBC, without prepared statements.
+4. Why it is bed to create a sql string and send it using JDBC.
 5. What is prepared statement
 6. What is difference between Lazy and Eager
 7. What is difference between save, persist and saveOnUpdate
@@ -10,6 +10,9 @@
 10. What is Criteria Pattern ?
 11. What Merge in hibernate do ? What is difference between object was returned and object was provided.
 12. What is Cache in hibernate ?
+13. What is proxy pattern ?
+14. Can we save just a pojo class with EntityManger ? Or Dao Interface ?
+15. Name other ORM frameworks, for Java, PHP, .NET
 
 TRUE OR FALSE ?
 1. Not everything can be done with Annotations in hibernate, instead of XML mappings.
@@ -19,6 +22,9 @@ TRUE OR FALSE ?
 5. In Java8 there is a new format for dates, JDBC can not work with but Hibernate can.
 6. We Can not execute Stored procedure or Native SQL in HIBERNATE.
 7. Flush by hibernate is executed only when transaction is finished or commit.
+8. Hibernate is the best ORM
+9. Not always data model can be mapped with hibernate.
+10. Hibernate can not async call to database.
 
 
 
